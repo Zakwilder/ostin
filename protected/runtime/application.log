@@ -1,0 +1,430 @@
+2014/05/08 16:59:50 [error] [system.db.CDbCommand] Error in preparing SQL: CREATE TABLE 'tbl_user' (
+	"id" INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	"username" VARCHAR(128) NOT NULL,
+	"password" VARCHAR(128) NOT NULL,
+	"email" VARCHAR(128) NOT NULL
+)
+2014/05/08 16:59:50 [error] [system.db.CDbCommand] CDbCommand::execute() failed: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 table 'tbl_user' already exists. The SQL statement executed was: CREATE TABLE 'tbl_user' (
+	"id" INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	"username" VARCHAR(128) NOT NULL,
+	"password" VARCHAR(128) NOT NULL,
+	"email" VARCHAR(128) NOT NULL
+).
+2014/05/08 16:59:50 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 table 'tbl_user' already exists. The SQL statement executed was: CREATE TABLE 'tbl_user' (
+	"id" INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	"username" VARCHAR(128) NOT NULL,
+	"password" VARCHAR(128) NOT NULL,
+	"email" VARCHAR(128) NOT NULL
+)' in C:\xampp\htdocs\ostin\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\ostin\framework\db\CDbCommand.php(1324): CDbCommand->execute()
+#1 C:\xampp\htdocs\ostin\framework\db\CDbMigration.php(233): CDbCommand->createTable('tbl_user', Array, NULL)
+#2 C:\xampp\htdocs\ostin\www\protected\migrations\m140508_144122_create_user_table.php(12): CDbMigration->createTable('tbl_user', Array)
+#3 C:\xampp\htdocs\ostin\framework\cli\commands\MigrateCommand.php(385): m140508_144122_create_user_table->up()
+#4 C:\xampp\htdocs\ostin\framework\cli\commands\MigrateCommand.php(109): MigrateCommand->migrateUp('m140508_144122_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 C:\xampp\htdocs\ostin\framework\console\CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 C:\xampp\htdocs\ostin\framework\console\CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#8 C:\xampp\htdocs\ostin\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 C:\xampp\htdocs\ostin\framework\base\CApplication.php(180): CConsoleApplication->processRequest()
+#10 C:\xampp\htdocs\ostin\framework\yiic.php(33): CApplication->run()
+#11 C:\xampp\htdocs\ostin\www\protected\yiic.php(7): require_once('C:\xampp\htdocs...')
+#12 C:\xampp\htdocs\ostin\www\protected\yiic(4): require_once('C:\xampp\htdocs...')
+#13 {main}
+---
+2014/05/08 17:01:08 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ostin.tbl_migration' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tbl_migration`.
+2014/05/08 17:13:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\ostin\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\ostin\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/dog...')
+#3 C:\xampp\htdocs\ostin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ostin\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/images/dog3.jpg
+HTTP_REFERER=http://ostin.web/index.php/site/index
+---
+2014/05/08 17:13:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\ostin\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\ostin\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/dog...')
+#3 C:\xampp\htdocs\ostin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ostin\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/images/dog5.jpg
+HTTP_REFERER=http://ostin.web/index.php/site/index
+---
+2014/05/08 17:13:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\ostin\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\ostin\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/dog...')
+#3 C:\xampp\htdocs\ostin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ostin\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/images/dog2.jpg
+HTTP_REFERER=http://ostin.web/index.php/site/index
+---
+2014/05/08 17:13:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\ostin\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\ostin\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/dog...')
+#3 C:\xampp\htdocs\ostin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ostin\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/images/dog1.jpg
+HTTP_REFERER=http://ostin.web/index.php/site/index
+---
+2014/05/08 17:13:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\ostin\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\ostin\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/dog...')
+#3 C:\xampp\htdocs\ostin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ostin\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/images/dog4.jpg
+HTTP_REFERER=http://ostin.web/index.php/site/index
+---
+2014/05/08 17:19:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\ostin\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\ostin\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/dog...')
+#3 C:\xampp\htdocs\ostin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ostin\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/images/dog1.jpg
+HTTP_REFERER=http://ostin.web/index.php/site/index
+---
+2014/05/08 17:19:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\ostin\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\ostin\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/dog...')
+#3 C:\xampp\htdocs\ostin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ostin\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/images/dog2.jpg
+HTTP_REFERER=http://ostin.web/index.php/site/index
+---
+2014/05/08 17:19:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\ostin\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\ostin\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/dog...')
+#3 C:\xampp\htdocs\ostin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ostin\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/images/dog3.jpg
+HTTP_REFERER=http://ostin.web/index.php/site/index
+---
+2014/05/08 17:19:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\ostin\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\ostin\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/dog...')
+#3 C:\xampp\htdocs\ostin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ostin\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/images/dog4.jpg
+HTTP_REFERER=http://ostin.web/index.php/site/index
+---
+2014/05/08 17:19:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\ostin\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\ostin\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/dog...')
+#3 C:\xampp\htdocs\ostin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ostin\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/images/dog5.jpg
+HTTP_REFERER=http://ostin.web/index.php/site/index
+---
+2014/05/08 17:19:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\ostin\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\ostin\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/dog...')
+#3 C:\xampp\htdocs\ostin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ostin\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/images/dog1.jpg
+HTTP_REFERER=http://ostin.web/index.php/site/index
+---
+2014/05/08 17:19:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\ostin\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\ostin\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/dog...')
+#3 C:\xampp\htdocs\ostin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ostin\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/images/dog2.jpg
+HTTP_REFERER=http://ostin.web/index.php/site/index
+---
+2014/05/08 17:19:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\ostin\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\ostin\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/dog...')
+#3 C:\xampp\htdocs\ostin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ostin\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/images/dog3.jpg
+HTTP_REFERER=http://ostin.web/index.php/site/index
+---
+2014/05/08 17:19:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\ostin\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\ostin\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/dog...')
+#3 C:\xampp\htdocs\ostin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ostin\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/images/dog4.jpg
+HTTP_REFERER=http://ostin.web/index.php/site/index
+---
+2014/05/08 17:19:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\ostin\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\ostin\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/dog...')
+#3 C:\xampp\htdocs\ostin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ostin\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/images/dog5.jpg
+HTTP_REFERER=http://ostin.web/index.php/site/index
+---
+2014/05/08 17:23:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\ostin\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\ostin\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/dog...')
+#3 C:\xampp\htdocs\ostin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ostin\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/images/dog1.jpg
+HTTP_REFERER=http://ostin.web/site/index
+---
+2014/05/08 17:23:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\ostin\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\ostin\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/dog...')
+#3 C:\xampp\htdocs\ostin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ostin\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/images/dog2.jpg
+HTTP_REFERER=http://ostin.web/site/index
+---
+2014/05/08 17:23:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\ostin\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\ostin\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/dog...')
+#3 C:\xampp\htdocs\ostin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ostin\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/images/dog3.jpg
+HTTP_REFERER=http://ostin.web/site/index
+---
+2014/05/08 17:23:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\ostin\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\ostin\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/dog...')
+#3 C:\xampp\htdocs\ostin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ostin\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/images/dog5.jpg
+HTTP_REFERER=http://ostin.web/site/index
+---
+2014/05/08 17:23:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\ostin\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\ostin\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/dog...')
+#3 C:\xampp\htdocs\ostin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ostin\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/images/dog4.jpg
+HTTP_REFERER=http://ostin.web/site/index
+---
+2014/05/08 17:23:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\ostin\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\ostin\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/dog...')
+#3 C:\xampp\htdocs\ostin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ostin\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/images/dog1.jpg
+HTTP_REFERER=http://ostin.web/site/index
+---
+2014/05/08 17:23:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\ostin\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\ostin\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/dog...')
+#3 C:\xampp\htdocs\ostin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ostin\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/images/dog3.jpg
+HTTP_REFERER=http://ostin.web/site/index
+---
+2014/05/08 17:23:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\ostin\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\ostin\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/dog...')
+#3 C:\xampp\htdocs\ostin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ostin\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/images/dog4.jpg
+HTTP_REFERER=http://ostin.web/site/index
+---
+2014/05/08 17:23:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\ostin\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\ostin\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/dog...')
+#3 C:\xampp\htdocs\ostin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ostin\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/images/dog2.jpg
+HTTP_REFERER=http://ostin.web/site/index
+---
+2014/05/08 17:23:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\ostin\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\ostin\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/dog...')
+#3 C:\xampp\htdocs\ostin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ostin\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/images/dog5.jpg
+HTTP_REFERER=http://ostin.web/site/index
+---
+2014/05/08 17:24:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\ostin\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\ostin\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/dog...')
+#3 C:\xampp\htdocs\ostin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ostin\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/images/dog1.jpg
+HTTP_REFERER=http://ostin.web/site/index
+---
+2014/05/08 17:24:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\ostin\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\ostin\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/dog...')
+#3 C:\xampp\htdocs\ostin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ostin\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/images/dog4.jpg
+HTTP_REFERER=http://ostin.web/site/index
+---
+2014/05/08 17:24:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\ostin\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\ostin\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/dog...')
+#3 C:\xampp\htdocs\ostin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ostin\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/images/dog2.jpg
+HTTP_REFERER=http://ostin.web/site/index
+---
+2014/05/08 17:24:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\ostin\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\ostin\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/dog...')
+#3 C:\xampp\htdocs\ostin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ostin\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/images/dog5.jpg
+HTTP_REFERER=http://ostin.web/site/index
+---
+2014/05/08 17:24:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\ostin\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\ostin\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/dog...')
+#3 C:\xampp\htdocs\ostin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ostin\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/images/dog3.jpg
+HTTP_REFERER=http://ostin.web/site/index
+---
+2014/05/08 17:26:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\ostin\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\ostin\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/dog...')
+#3 C:\xampp\htdocs\ostin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ostin\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/images/dog1.jpg
+HTTP_REFERER=http://ostin.web/site/index
+---
+2014/05/08 17:26:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\ostin\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\ostin\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/dog...')
+#3 C:\xampp\htdocs\ostin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ostin\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/images/dog2.jpg
+HTTP_REFERER=http://ostin.web/site/index
+---
+2014/05/08 17:26:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\ostin\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\ostin\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/dog...')
+#3 C:\xampp\htdocs\ostin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ostin\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/images/dog4.jpg
+HTTP_REFERER=http://ostin.web/site/index
+---
+2014/05/08 17:26:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\ostin\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\ostin\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/dog...')
+#3 C:\xampp\htdocs\ostin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ostin\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/images/dog3.jpg
+HTTP_REFERER=http://ostin.web/site/index
+---
+2014/05/08 17:26:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\ostin\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\ostin\framework\web\CController.php(270): CController->missingAction('images')
+#1 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(282): CController->run('images')
+#2 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/dog...')
+#3 C:\xampp\htdocs\ostin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\ostin\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/site/images/dog5.jpg
+HTTP_REFERER=http://ostin.web/site/index
+---
+2014/05/11 17:38:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\ostin\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\ostin\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\ostin\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\ostin\www\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/05/11 17:42:17 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ostin.user' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `user`.
+in C:\xampp\htdocs\ostin\www\index.php (13)
