@@ -12,11 +12,7 @@
     <div id="header">
         <ul>
             <li><a href="<?php echo $this->createUrl('site/index')?>">home</a></li>
-            <li><a href="<?php echo $this->createUrl('site/contact')?>">about us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">News &amp; Updates</a></li>
-            <li><a href="#">Place and order</a></li>
-            <li><a href="#" class="lastchild">Contact</a></li>
+            <li><a href="<?php echo $this->createUrl('site/contact')?>" class="lastchild">about us</a></li>
         </ul>
     </div>
     <div id="content">
