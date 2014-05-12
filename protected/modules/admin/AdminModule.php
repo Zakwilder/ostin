@@ -12,6 +12,9 @@ class AdminModule extends CWebModule
 			'admin.models.*',
 			'admin.components.*',
 		));
+
+		$this->_initBootstrap();
+		$this->_initJsCss();
 	}
 
 	public function beforeControllerAction($controller, $action)
@@ -24,5 +27,25 @@ class AdminModule extends CWebModule
 		}
 		else
 			return false;
+	}
+
+	/**
+	 * Css and js initialization.
+	 *
+	 * @return void
+	 */
+	private function _initJsCss(){
+		$cs = Yii::app()->clientScript;
+		$cs->registerCssFile(Yii::app()->baseUrl . '/css/admin/admin.css');
+
+	}
+
+	/**
+	 * Yiibooster initialization.
+	 *
+	 * @return void
+	 */
+	private function _initBootstrap(){
+		Yii::app()->bootstrap->register();
 	}
 }

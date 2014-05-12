@@ -77,25 +77,17 @@ class SiteController extends Controller
 	 */
 	public function actionLogin()
 	{
-		$model=new LoginForm;
+		$model = new User;
 
-		// if it is ajax validation request
-		if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
-		{
-			echo CActiveForm::validate($model);
-			Yii::app()->end();
+		if (isset($_POST['User'])) {
+			$model->attributes = $_POST['User'];
+			$this->_login($model);
 		}
 
-		// collect user input data
-		if(isset($_POST['LoginForm']))
-		{
-			$model->attributes=$_POST['LoginForm'];
-			// validate user input and redirect to the previous page if valid
-			if($model->validate() && $model->login())
-				$this->redirect(Yii::app()->user->returnUrl);
-		}
-		// display the login form
-		$this->render('login',array('model'=>$model));
+		$this->render('login', array(
+			'model' => $model,
+		));
+
 	}
 
 	/**
@@ -106,4 +98,25 @@ class SiteController extends Controller
 		Yii::app()->user->logout();
 		$this->redirect(Yii::app()->homeUrl);
 	}
+
+	/**
+	 * Logs user in.
+	 *
+	 * @param object $model User object.
+	 *
+	 * @return void
+	 */
+	private function _login($model)
+	{
+		$identity = new UserIdentity($model->username, $model->password);
+
+		if ($identity->authenticate()) {
+			Yii::app()->user->login($identity);
+			$this->redirect(Yii::app()->baseUrl . '/admin');
+		}
+		else {
+			$model->addError($this->_attributesErrorMapping[$identity->errorCode], $identity->errorMessage);
+		}
+	}
+
 }

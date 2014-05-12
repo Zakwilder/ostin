@@ -85,6 +85,10 @@ return array(
 				*/
 			),
 		),
+		'authManager' => array(
+			'class'        => 'AuthManager',
+			'connectionID' => 'db',
+		),
 	),
 
 	// application-level parameters that can be accessed

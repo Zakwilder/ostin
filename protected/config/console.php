@@ -9,6 +9,11 @@ return array(
 	// preloading 'log' component
 	'preload'=>array('log'),
 
+	'import' => array(
+		'application.models.*',
+		'application.components.*',
+	),
+
 	// application components
 	'components'=>array(
 
@@ -30,6 +35,10 @@ return array(
 					'levels'=>'error, warning',
 				),
 			),
+		),
+		'authManager' => array(
+			'class'        => 'AuthManager',
+			'connectionID' => 'db',
 		),
 	),
 );

@@ -97,4 +97,17 @@ class User extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+
+	/**
+	 * Returns the static model of the specified AR class.
+	 *
+	 * @return Array of UserRole objects
+	 */
+	public static function getUserRoles()
+	{
+		$roles = Yii::app()->authManager->getRoles();
+		$list = CHtml::listData($roles, 'name', 'name');
+		return $list;
+	}
+
 }
